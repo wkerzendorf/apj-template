@@ -1,0 +1,80 @@
+\documentclass[manuscript]{aastex}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{natbib}
+\usepackage[xindy, toc, hyperfirst=false, nolist, nostyles, sanitize={name=false,description=false,symbol=false}]{glossaries}
+\glsdisablehyper
+\usepackage[hyperref,x11names, table]{xcolor}
+
+
+
+%graphic rules
+
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+% Paths for tables and plots - normally are in subdirectories, but for submission can be in the main dir
+\newcommand{\plotdir}{.}
+\newcommand{\tabledir}{.}
+
+
+%define datasets used
+
+
+
+%inputting the glossary
+\input{../tex-glossary/glossary.tex}
+
+
+\shortauthors{W.E. Kerzendorf et al.}
+\shorttitle{SHORTTITLE}
+
+\begin{document}
+
+% TITLE AND AUTHORS
+%-----------
+\title{Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...}
+\footnote{Based on observations collected by blah}
+
+\author{Wolfgang~E.~Kerzendorf\altaffilmark{1}\altaffilmark{2}} 
+\email{wkerzend@mso.anu.edu.au}
+
+
+\altaffiltext{1}{Research School of Astronomy and
+Astrophysics, Mount Stromlo Observatory, Cotter Road, Weston Creek,
+ACT 2611, Australia}
+
+\altaffiltext{2}{Department of Astronomy and Astrophysics, University of Toronto, 50 Saint George Street, Toronto, ON M5S 3H4, Canada}
+
+\begin{abstract}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pretium egestas augue in viverra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed semper elementum lacus id tincidunt. Suspendisse potenti. Quisque interdum sollicitudin lacus, ac malesuada dui interdum non. Donec fringilla, nulla et vestibulum ultrices, dolor nibh pellentesque lectus, quis tempus odio lacus id nunc. Donec scelerisque euismod justo consequat lobortis. Sed nisl tellus, vestibulum eget laoreet quis, accumsan id massa. Sed ut mattis lorem. Sed id viverra purus.
+\end{abstract}
+
+
+\maketitle
+
+\section{Introduction}
+
+\sneia\ are the best things ever!
+
+
+\section{Observations}
+
+\section{Analysis}
+
+\section{Discussion}
+
+\section{Conclusion}
+
+\section{Acknowledgements}
+
+W.~E.~Kerzendorf was supported by blah
+
+\bibliographystyle{hapj}
+\bibliography{apj_template}
+
+
+
+\end{document}
